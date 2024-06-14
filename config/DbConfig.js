@@ -1,11 +1,8 @@
 import { Sequelize } from "sequelize";
 import { config } from "dotenv";
-// import envFile from "./envConfig.js";
 import path from 'path';
 
-// Load environment variables from the appropriate .env file
-// config({ path: path.resolve(process.cwd(), envFile) });
-
+// Load environment variables from .env file
 config();
 
 const db = new Sequelize(
@@ -14,10 +11,10 @@ const db = new Sequelize(
     process.env.DB_PASS,
     {
         host: process.env.DB_HOST,
-        dialect: 'mysql',
-        port: process.env.DB_PORT  // Include the port if necessary
+        dialect: "mysql",
+        port: process.env.DB_PORT,
+        logging: false // Optional: Turn off logging SQL queries
     }
 );
-
 
 export default db;
