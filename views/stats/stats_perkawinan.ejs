@@ -1,0 +1,48 @@
+
+<div class="card">
+  <div class="card-body">
+      <h5 class="card-title text-center">Statistik Status Perkawinan</h5>
+      <canvas id="statusPerkawinanChart"></canvas>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      // Fetch and display status perkawinan statistics
+      const statusPerkawinanResponse = await axios.get('/perkawinan-statistics');
+      const statusPerkawinanData = statusPerkawinanResponse.data;
+
+      const statusPerkawinanCtx = document.getElementById('statusPerkawinanChart').getContext('2d');
+      new Chart(statusPerkawinanCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Belum Menikah', 'Sudah Menikah', 'Cerai Hidup', 'Cerai Mati'],
+          datasets: [{
+            label: 'Jumlah',
+            data: [
+              statusPerkawinanData['Belum Menikah'], statusPerkawinanData['Sudah Menikah'], 
+              statusPerkawinanData['Cerai Hidup'], statusPerkawinanData['Cerai Mati']
+            ],
+            backgroundColor: ['#36a2eb', '#ff6384', '#ff9f40', '#ffcd56'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          },
+          plugins: {
+            legend: {
+                display: false // Sembunyikan legenda
+            }
+          }
+        }
+      });
+    } catch (error) {
+      console.error('Error fetching statistics:', error);
+    }
+  });
+</script>

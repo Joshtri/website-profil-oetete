@@ -1,0 +1,25 @@
+#main-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0 0;
+}
+
+.maps-api-responsive{
+    width: 100% ;
+    height: 0 ;
+    padding-bottom: 50% ;
+    position: relative ;
+}
+
+.maps-api-responsive iframe{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.rounded-4{
+    border-radius: 0.7rem !important;
+}
+
+

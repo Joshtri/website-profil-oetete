@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur Pemerintahan</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/footer.css" />
+    <link rel="icon" href="/public/images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="transition-page-1">
+    <!-- header start -->
+    <%- include('partials/header'); -%>
+    <!-- header end   -->
+
+    <div class="d-flex justify-content-center col-12 mb-4">
+      <h2
+        class="mt-4 typings mx-auto underline-hover-arc cursor-pointer"
+        id="type" style="font-family: 'Barlow';font-weight:bold"
+      >
+        STRUKTUR PEMERINTAHAN
+      </h2>
+    </div>
+
+    <style>
+      .pdfobject-container {
+        height: 30rem;
+        border: 1rem solid rgba(0, 0, 0, 0.1);
+      }
+    </style>
+
+    <!-- <div class="mx-auto"">
+        <embed src="/doc/StrukturFontein.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf" height="600px" / class="w-100">
+    </div>   -->
+    <!-- <p style="text-align: center;">
+        <iframe src="/doc/StrukFontein.pdf" width="85%" height="800px"></iframe>
+    </p> -->
+
+    <div class="container-fluid col-11 h-50">
+      <div id="example1"></div>
+    </div>
+
+    <div class="mt-5 text-center">
+      <a href="/doc/Struktur-Oetete.pdf" class="btn btn-primary" download="">
+        <img
+          src="https://img.icons8.com/wired/32/000000/download--v1.png"
+        />&nbsp; Struktur Pemerintahan Kelurahan Oetete
+      </a>
+    </div>
+
+    <%-include('partials/scrollUp'); -%>
+    <br /><br /><br /><br /><br />
+    <%-include('partials/footer'); -%>
+
+    <script type="text/javascript">
+      var i = 0;
+      var text = "STRUKTUR PEMERINTAHAN";
+      var speed = 150;
+
+      document.getElementById("type").innerHTML = "";
+      function type() {
+        document.getElementById("type").innerHTML += text.charAt(i);
+        i++;
+        if (i > text.lenght) return;
+        setTimeout(type, speed);
+      }
+      type();
+    </script>
+
+    <!-- <i class="fa-duotone fa-download"></i> -->
+
+    <!-- PDF importing. -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.16.105/build/pdf.min.js"></script> -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"
+      integrity="sha512-MoP2OErV7Mtk4VL893VYBFq8yJHWQtqJxTyIAsCVKzILrvHyKQpAwJf9noILczN6psvXUxTr19T5h+ndywCoVw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/bd1d04a488.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/javascripts/scrollTop.js"></script>
+    <script src="/javascripts/pdfobject.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+      integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      PDFObject.embed(
+        "/doc/Struktur-Oetete.pdf#toolbar=1&navpanes=0&scrollbar=0&view=Fit",
+        "#example1"
+      );
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+  </body>
+</html>

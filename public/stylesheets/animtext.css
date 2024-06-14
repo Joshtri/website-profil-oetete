@@ -1,0 +1,45 @@
+/* Jangan ganggu bagian bawah:) */
+
+
+.paragraph-page-anim {
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
+}
+
+
+.paragraph-page-test {
+  transform: translateY(100px);
+  animation: slideUp .8s ease forwards .5s;
+}
+
+/* Semua animasi or we can say keyframes. */
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
