@@ -1,10 +1,12 @@
 import { Sequelize } from "sequelize";
 import { config } from "dotenv";
-import envFile from "./envConfig.js";
+// import envFile from "./envConfig.js";
 import path from 'path';
 
 // Load environment variables from the appropriate .env file
-config({ path: path.resolve(process.cwd(), envFile) });
+// config({ path: path.resolve(process.cwd(), envFile) });
+
+config();
 
 const db = new Sequelize(
     process.env.DB_NAME,
