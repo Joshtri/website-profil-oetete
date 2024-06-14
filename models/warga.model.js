@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import db from "../config/dbConfig.js";
+import db from "../config/DbConfig.js";
 import Keluarga from "./keluarga.model.js";
 
 //define warga model.
