@@ -79,7 +79,7 @@ export default Warga;
 (async () => {
     try {
         await db.sync();
-        console.log("keluarga table has been created.");
+        console.log("warga table has been created.");
     } catch (error) {
         console.error("Unable to create the table:", error);
     }
