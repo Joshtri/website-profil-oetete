@@ -4,6 +4,11 @@
   "main": "index.js",
   "repository": "https://github.com/Joshtri/website-profil-oetete-v1.3.git",
   "author": "Joshtri <stuffofyos1516@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "dev" : "nodemon index.js",
+    "start": "node index.js"
+  },
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.5",
