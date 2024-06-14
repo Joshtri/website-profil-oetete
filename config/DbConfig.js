@@ -26,7 +26,8 @@ const db = new Sequelize({
     database:process.env.DB_NAME,
     dialect: 'mysql',
     dialectModule: mysql2, // Use mysql2 as the dialect module
-    benchmark: true
+    benchmark: true,
+    port: process.env.DB_PORT
 
 });
 

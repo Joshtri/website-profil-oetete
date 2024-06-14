@@ -1,15 +1,17 @@
 {
   "name": "Website-Kelurahan-Oetete-1.3-fix",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/Joshtri/website-profil-oetete-v1.3.git",
-  "author": "Joshtri <stuffofyos1516@gmail.com>",
   "type": "module",
   "scripts": {
-    "dev" : "nodemon index.js",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev" : "nodemon index.js"
   },
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
