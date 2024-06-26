@@ -1,8 +1,25 @@
+import { getTotalGender, getTotalWarga} from '../repository/warga.repository.js'
 
 
+export const mainPage = async (req, res) => {
+    try {
 
-export const mainPage = async(req,res)=>{
-    res.render('home');
+
+        const totalWargaLakiLaki = await getTotalGender('laki-laki');
+        console.log('Total warga laki-laki:', totalWargaLakiLaki);
+
+        const totalWarga = await getTotalWarga();
+
+
+        const totalWargaPerempuan = await getTotalGender('perempuan');
+        console.log('Total warga perempuan:', totalWargaPerempuan);
+        
+        // Render halaman 'home' dengan mengirimkan data genderStats
+        res.render('home', { totalWargaLakiLaki,totalWargaPerempuan,totalWarga });
+    } catch (error) {
+        // Tangani kesalahan jika terjadi
+        res.status(500).json({ message: error.message });
+    }
 };
 
 

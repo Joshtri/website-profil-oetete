@@ -1,20 +1,17 @@
-// Get the button:
-let mybutton = document.getElementById("btnScrollUp");
+  // Saat pengguna menggulir ke bawah 20px dari atas dokumen, tampilkan tombol
+  window.onscroll = function() { scrollFunction() };
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+  function scrollFunction() {
+    const btnScrollUp = document.getElementById("btnScrollUp");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      btnScrollUp.style.display = "block";
+    } else {
+      btnScrollUp.style.display = "none";
+    }
   }
-}
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    $("html, body").animate(
-        { scrollTop: "0" }, 700);
-};
-
+  // Ketika pengguna mengklik tombol, gulir ke atas dokumen
+  function topFunction() {
+    document.body.scrollTop = 0; // Untuk Safari
+    document.documentElement.scrollTop = 0; // Untuk Chrome, Firefox, IE, dan Opera
+  }

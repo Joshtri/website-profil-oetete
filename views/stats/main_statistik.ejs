@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Statistik</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/stylesheets/footer.css"> 
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
@@ -17,6 +17,13 @@
 <body>
 
     <%-include('partials/header'); -%>
+
+    <style>
+        .accordion-body {
+            max-height: 300px; /* Adjust the height as needed */
+            overflow-y: auto;
+        }
+    </style>
 
     <div class="container my-4">
         <nav aria-label="breadcrumb" class="small">
@@ -35,21 +42,21 @@
                 <%-include('stats/stats_jeniskelamin'); %>
 
                 
-                <div class="accordion" id="accordionExample">
+                <div class="accordion" id="accordionJKelamin">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h2 class="accordion-header" id="headingJenisKelamin">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJenisKelamin" aria-expanded="true" aria-controls="collapseOne">
                                 Informasi Jenis Kelamin
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseJenisKelamin" class="accordion-collapse collapse show" aria-labelledby="headingJenisKelamin" data-bs-parent="#accordionJKelamin">
                             <div class="accordion-body">
                                 <p>Jenis Kelamin:</p>
                                 <ul>
-                                    <li class="nav-item">Laki-Laki : </li>
-                                    <li class="nav-item">Perempuan : </li>
+                                    <li class="nav-item">Laki-Laki : <%= totalWargaLakiLaki %></li>
+                                    <li class="nav-item">Perempuan : <%= totalWargaPerempuan %></li>
                                 </ul>
-                                <p>Total Keseluruhan :</p>
+                                <p>Total Keseluruhan : <%= totalWarga %></p>
                             </div>
                         </div>
                     </div>
@@ -59,17 +66,22 @@
             <div class="col-lg-6 ">
                 <%-include('stats/stats_perkawinan'); %>
 
-                <!-- <div class="card mt-3">
-                    <div class="card-body">
-                        <p>Jenis Kelamin:</p>
-                        <ul>
-                            <li class="nav-item">Laki-Laki : </li>
-                            <li class="nav-item">Perempuan : </li>
-                        </ul>
-        
-                        <p>Total Keseluruhan :</p>
+                <div class="accordion" id="accordionPerkawinan">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingPerkawinan">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerkawinan" aria-expanded="true" aria-controls="collapsePerkawinan">
+                          Informasi Status Perkawinan
+                        </button>
+                      </h2>
+                      <div id="collapsePerkawinan" class="accordion-collapse collapse show" aria-labelledby="headingPerkawinan" data-bs-parent="#accordionPerkawinan">
+                        <div class="accordion-body">
+                          <ol id="perkawinanList" class="list-group list-group-numbered">
+                            <!-- Data status perkawinan akan dimuat di sini -->
+                          </ol>
+                        </div>
+                      </div>
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <hr>
@@ -77,37 +89,115 @@
             <div class="col-lg-6 ">
                 <%-include('stats/stats_pendidikan'); %>
 
-                <!-- <div class="card mt-3">
-                    <div class="card-body">
-                        <p>Jenis Kelamin:</p>
-                        <ul>
-                            <li class="nav-item">Laki-Laki : </li>
-                            <li class="nav-item">Perempuan : </li>
-                        </ul>
-        
-                        <p>Total Keseluruhan :</p>
+                <div class="accordion" id="accordionPendidikan">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingPendidikan">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePendidikan" aria-expanded="true" aria-controls="collapsePendidikan">
+                          Informasi Pendidikan
+                        </button>
+                      </h2>
+                      <div id="collapsePendidikan" class="accordion-collapse collapse show" aria-labelledby="headingPendidikan" data-bs-parent="#accordionPendidikan">
+                        <div class="accordion-body">
+                          <ol id="pendidikanList" class="list-group list-group-numbered">
+                            <!-- Data pendidikan akan dimuat di sini -->
+                          </ol>
+                        </div>
+                      </div>
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <div class="col-lg-6 ">
                 <%-include('stats/stats_pekerjaan'); %>
 
-                <!-- <div class="card mt-3">
-                    <div class="card-body">
-                        <p>Pekerjaan:</p>
-                        <ul>
-                            <li class="nav-item">Laki-Laki : </li>
-                            <li class="nav-item">Perempuan : </li>
-                        </ul>
-        
-                        <p>Total Keseluruhan :</p>
+                <div class="accordion" id="accordionPekerjaan">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingPekerjaan">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePekerjaan" aria-expanded="true" aria-controls="collapsePekerjaan">
+                                Informasi Pekerjaan
+                            </button>
+                        </h2>
+                        <div id="collapsePekerjaan" class="accordion-collapse collapse show" aria-labelledby="headingPekerjaan" data-bs-parent="#accordionPekerjaan">
+                            <div class="accordion-body">
+                                <ol id="pekerjaanList" class="list-group list-group-numbered">
+                                    <!-- Data pekerjaan akan dimuat di sini -->
+                                </ol>
+                            </div>
+                        </div>
                     </div>
-                </div> -->
+                </div>
             </div>
            
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+          const response = await fetch('/pekerjaan_gender'); // Ganti dengan URL endpoint Anda
+          const data = await response.json();
+          const pekerjaanList = document.getElementById('pekerjaanList');
+    
+          for (const [key, value] of Object.entries(data)) {
+            const li = document.createElement('li');
+            li.className = 'list-group-item';
+            li.innerHTML = `
+              ${key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}: 
+              <ul>
+                <li class="nav-item">Laki-Laki: ${value.lakiLaki}</li>
+                <li class="nav-item">Perempuan: ${value.perempuan}</li>
+              </ul>
+              <p>Total Keseluruhan: ${value.total}</p>
+            `;
+            pekerjaanList.appendChild(li);
+          }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+        const response = await fetch('/perkawinan_gender'); // Ganti dengan URL endpoint Anda
+        const data = await response.json();
+        const perkawinanList = document.getElementById('perkawinanList');
+
+        for (const [key, value] of Object.entries(data)) {
+            const li = document.createElement('li');
+            li.className = 'list-group-item';
+            li.innerHTML = `
+            ${key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}: 
+            <ul>
+                <li class="nav-item">Laki-Laki: ${value.lakiLaki}</li>
+                <li class="nav-item">Perempuan: ${value.perempuan}</li>
+            </ul>
+            <p>Total Keseluruhan: ${value.total}</p>
+            `;
+            perkawinanList.appendChild(li);
+        }
+        });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const response = await fetch('/pendidikan_gender'); // Ganti dengan URL endpoint Anda
+      const data = await response.json();
+      const pendidikanList = document.getElementById('pendidikanList');
+
+      for (const [key, value] of Object.entries(data)) {
+        const li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.innerHTML = `
+          ${key}: 
+          <ul>
+            <li class="nav-item">Laki-Laki: ${value.lakiLaki}</li>
+            <li class="nav-item">Perempuan: ${value.perempuan}</li>
+          </ul>
+          <p>Total Keseluruhan: ${value.total}</p>
+        `;
+        pendidikanList.appendChild(li);
+      }
+    });
+  </script>
+
     
     <%-include('partials/footer'); -%>
     <%-include('partials/scrollUp'); -%>   

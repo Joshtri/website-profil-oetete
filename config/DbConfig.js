@@ -2,10 +2,11 @@ import { Sequelize } from "sequelize";
 import { config } from "dotenv";
 import path from 'path';
 import mysql2 from 'mysql2'; // Import mysql2 as ES module
-
+import envFile from "./envConfig.js";
 
 // Load environment variables from .env file
-config();
+// config();
+config({ path: path.resolve(process.cwd(), envFile) });
 
 // const db = new Sequelize(
 //     process.env.DB_NAME,
@@ -26,7 +27,7 @@ const db = new Sequelize({
     database:process.env.DB_NAME,
     dialect: 'mysql',
     dialectModule: mysql2, // Use mysql2 as the dialect module
-    benchmark: true,
+    // benchmark: true,
     port: process.env.DB_PORT
 
 });

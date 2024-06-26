@@ -15,12 +15,6 @@ router.get('/visi_misi_kelurahan', indexController.visiMisiPage)
 router.get('/struktur_kelurahan', indexController.strukturPemPage)
 
 
-router.get('/get_query', async(req,res)=>{
-
-    const dataKeluarga =  await Keluarga.findAll();
-
-    res.json(dataKeluarga);
-});
 
 
 

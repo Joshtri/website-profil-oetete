@@ -11,10 +11,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+  
 
     <!-- header start -->
     <%- include('partials/header'); -%>
@@ -40,21 +41,21 @@
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="/images/BoardOetete.png" class="d-block w-100 rounded-3" alt="..."  style="width: 2vw">
+                        <img src="/images/oetete4.webp" class="d-block w-100 rounded-3" alt="..."  style="width: 2vw">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Papan Kelurahan Oetete</h5>
                           <p>Berisikan informasi terkait Kelurahan Oetete</p>
                         </div>  
                       </div>
                       <div class="carousel-item">
-                        <img src="/images/In Front Oetete.png" class="d-block w-100 rounded-3" alt="... "  style="width: 2vw">
+                        <img src="/images/oetete1.webp" class="d-block w-100 rounded-3" alt="... "  style="width: 2vw">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Tampilan depan Kantor Kelurahan Oetete</h5>
                           <p>Kantor Kelurahan Oetete tepat berada disamping Gereja Jemaat GMIT kefas</p>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img src="/images/InsideOffice1.png" class="d-block w-100 rounded-3" alt="..."  style="width: 2vw">
+                        <img src="/images/oetete2.webp" class="d-block w-100 rounded-3" alt="..."  style="width: 2vw">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Tampilan dalam Kantor Kelurahan Oetete</h5>
                           <p></p>
@@ -98,7 +99,15 @@
     </nav>
     
 
-    <div class="container mb-3">
+    <style>
+      .card-img-top {
+        height: 200px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+        object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+      }
+    </style>
+    
+
+    <div id="fasilitas-section" class="container mb-3">
       <div class="card">
         <div class="col-md-9 mx-auto">
           <p style="text-align: justify;">
@@ -125,11 +134,11 @@
                   <div class="row justify-content-center">
                     <!-- card pendidikan -->
                     <div class="col-md-4 mb-4">
-                      <div class="card" style="width: 15rem;">
+                      <div class="card mx-auto" style="width: 15rem;">
                           <img src="/images/pendidikan/paudoetete.webp" class="card-img-top" alt="...">
                           <div class="card-body">
-                              <h5 class="card-title">PAUD KOMODO</h5>
-                              <p class="card-text text-justify">SD Inpres Fatufeto 1 berada di Jln. Sasando No.18 dengan akreditasi A.&nbsp;</p>
+                              <h5 class="card-title mb-4">PAUD KOMODO</h5>
+                              
                               <div class="text-center">
                                 <a type="button" class="btn btn-warning" href="https://maps.app.goo.gl/yWTGdtS4fEN7LFrf9?g_st=iw"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
                               </div>
@@ -138,11 +147,11 @@
                     </div>
 
                     <div class="col-md-4 mb-4">
-                        <div class="card animate-on-hover" style="width: 15rem;">
+                        <div class="card mx-auto animate-on-hover" style="width: 15rem;">
                             <img src="/images/pendidikan/tkoetete.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">TK KRISTEN GMIT KEFAS OETETE</h5>
-                                <p class="card-text text-left">SD tersebut berada di Jln.Piano No.62, Serta memiliki ekstrakurikuler pramuka</p>
+                                
                                 <div class="text-center">
                                   <a type="button" class="btn btn-warning" href="#"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
                                 </div>
@@ -151,11 +160,11 @@
                     </div>
 
                     <div class="col-md-4 mb-4">
-                      <div class="card animate-on-hover" style="width: 15rem;">
+                      <div class="card mx-auto animate-on-hover" style="width: 15rem;">
                           <img src="/images/pendidikan/sdoetete.webp" class="card-img-top" alt="...">
                           <div class="card-body">
-                              <h5 class="card-title">SD INPRES OETETE 3</h5>
-                              <p class="card-text text-justify">Paud tersebut merupakan salah satu dari Yayasan Imahaka Kupang dengan alamat Jln. Seruling No.5.</p>
+                              <h5 class="card-title mb-4">SD INPRES OETETE 3</h5>
+                              
                               <div class="text-center">
                                 <a type="button" class="btn btn-warning" href="https://maps.app.goo.gl/FiAnBkU1aN9SCMcPA?g_st=iw"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
                               </div>
@@ -164,11 +173,11 @@
                     </div>
 
                     <div class="col-md-4 mb-4">
-                      <div class="card animate-on-hover" style="width: 15rem;">
+                      <div class="card mx-auto animate-on-hover" style="width: 15rem;">
                           <img src="/images/pendidikan/smp2.webp" class="card-img-top" alt="...">
                           <div class="card-body">
                               <h5 class="card-title">SMP NEGERI 2 KUPANG</h5>
-                              <p class="card-text text-justify">PAUD Kober Sola Gratia-B berada di Jln.Tifa No.48 yang berada disamping Lapangan Voly Batukadera</p>
+                              
                               <div class="text-center">
                                 <a type="button" class="btn btn-warning" href="https://maps.app.goo.gl/PbLwTV2LYoRoDyw47?g_st=iw"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
                               </div>
@@ -177,11 +186,11 @@
                     </div>
 
                     <div class="col-md-4 mb-4">
-                      <div class="card animate-on-hover" style="width: 15rem;">
+                      <div class="card mx-auto animate-on-hover" style="width: 15rem;">
                           <img src="/images/pendidikan/sma1.webp" class="card-img-top" alt="...">
                           <div class="card-body">
                               <h5 class="card-title">SMA NEGERI 1 KUPANG</h5>
-                              <p class="card-text">Paud Percontohan Glorya Sola merupakan PAUD diwilayah fatufeto yang berada Jln.Tifa No.48 yang berada di Jln. Sasando No.70</p>
+                              
                               <div class="text-center">
                                 <a type="button" class="btn btn-warning" href="https://maps.app.goo.gl/mEGSjRpm3fKt8vFNA?g_st=iw"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
                               </div>
@@ -210,11 +219,11 @@
                   <div class="row justify-content-center">
 
                     <div class="col-md-4 mb-4">
-                      <div class="card" style="width: 15rem;">
+                      <div class="card mx-auto" style="width: 15rem;">
                           <img src="/images/others/gereja.webp" class="card-img-top" alt="...">
                           <div class="card-body">
                               <h5 class="card-title">GEREJA GMIT JEMAAT KEFAS</h5>
-                              <p class="card-text">GMIT Jemaat Imanuel Batukadera berada di Jln.Tifa No.48 .</p>
+                             
                               <br>
                               <div class="text-center">
                                 <a type="button" class="btn btn-warning" href="https://maps.app.goo.gl/rAzm89PzhQnT7PJs6"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
@@ -241,14 +250,14 @@
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
 
-                  <div class="row justify-content-center">
+                  <div class="row">
 
                     <div class="col-md-4 mb-4">
-                      <div class="card" style="width: 15rem;">
+                      <div class="card mx-auto" style="width: 15rem;">
                         <img src="/images/others/rri.webp" class="card-img-top mt-1" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Lembaga Penyiaran Publik RRI Kupang</h5>
-                          <p class="card-text">PELNI merupakan tempat penjualan tiket kapal yang berada setelah TPS (Tempat Pembuangan Sementara) di Jln. Pahlawan No.7</p>
+                          <h5 class="card-title mb-3">Lembaga Penyiaran Publik RRI Kupang</h5>
+                          
                           <div class="text-center">
                             <a type="button" class="btn btn-warning" href="https://maps.app.goo.gl/ogkRxdfz9Y4iovYo6"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
                           </div>
@@ -258,11 +267,11 @@
 
 
                     <div class="col-md-4 mb-4">
-                      <div class="card" style="width: 15rem;">
+                      <div class="card mx-auto" style="width: 15rem;">
                         <img src="/images/others/bankntt.webp" class="card-img-top mt-1" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">BANK NTT</h5>
-                          <p class="card-text">PELNI merupakan tempat penjualan tiket kapal yang berada setelah TPS (Tempat Pembuangan Sementara) di Jln. Pahlawan No.7</p>
+                          <h5 class="card-title mb-5">BANK NTT</h5>
+                          
                           <div class="text-center">
                             <a type="button" class="btn btn-warning" href="https://maps.app.goo.gl/ogkRxdfz9Y4iovYo6"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
                           </div>
@@ -275,7 +284,7 @@
                         <img src="/images/others/rsbhayangkara.webp"class="card-img-top mt-1" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Rumah Sakit Bhayangkara Kupang</h5>
-                          <p class="card-text">PELNI merupakan tempat penjualan tiket kapal yang berada setelah TPS (Tempat Pembuangan Sementara) di Jln. Pahlawan No.7</p>
+                          
                           <div class="text-center">
                             <a type="button" class="btn btn-warning" href="https://maps.app.goo.gl/ogkRxdfz9Y4iovYo6"><i class="fa-solid fa-map-location-dot mx-1 fs-5" style="color: #35504b;"></i>Titik Lokasi</a>
                           </div>
@@ -307,8 +316,8 @@
 
         <div class="card mb-3 border-0 mx-2" style="width: 14rem; background-color: #F3F7EC;">
           <div class="card-body">
-            <h5 class="card-title text-center">laki-Laki</h5>
-            <div class="display-4 text-center" style="font-weight: bold; font-size: 50px;">0</div>
+            <h5 class="card-title text-center">Laki-Laki</h5>
+            <div class="display-4 text-center" style="font-weight: bold; font-size: 50px;"><%= totalWargaLakiLaki %></div>
             <a href="/adm/data/masuk" class="text-decoration-none fw-bold">
               <!-- <p class="card-text"><i class="fa-solid fa-users ms-1"></i> - Lihat detail&nbsp&nbsp<i class="fa-sharp fa-solid fa-arrow-right"></i></p> -->
             </a>
@@ -319,7 +328,7 @@
         <div class="card mb-3 border-0 mx-2" style="width: 14rem; background-color: #F3F7EC;">
           <div class="card-body">
             <h5 class="card-title text-center">Perempuan</h5>
-            <div class="display-4 text-center" style="font-weight: bold; font-size: 50px;">0</div>
+            <div class="display-4 text-center" style="font-weight: bold; font-size: 50px;"><%= totalWargaPerempuan %></div>
             <a href="/adm/data/masuk" class="text-decoration-none fw-bold">
               <!-- <p class="card-text"><i class="fa-solid fa-users ms-1"></i> - Lihat detail&nbsp&nbsp<i class="fa-sharp fa-solid fa-arrow-right"></i></p> -->
             </a>
@@ -330,7 +339,7 @@
         <div class="card mb-3 border-0 mx-2" style="width: 14rem; background-color: #F3F7EC;">
           <div class="card-body">
             <h5 class="card-title text-center">Jumlah Penduduk</h5>
-            <div class="display-4 text-center" style="font-weight: bold; font-size: 50px;">0</div>
+            <div class="display-4 text-center" style="font-weight: bold; font-size: 50px;"><%= totalWarga %></div>
             <a href="/adm/data/masuk" class="text-decoration-none fw-bold">
               <!-- <p class="card-text"><i class="fa-solid fa-users ms-1"></i> - Lihat detail&nbsp&nbsp<i class="fa-sharp fa-solid fa-arrow-right"></i></p> -->
             </a>
@@ -339,7 +348,7 @@
 
       </div>
     </div>
-    	
+
 
 
       <!-- actualy for divider -->
@@ -352,9 +361,103 @@
     <%-include('maps');%>
 
 
+<!-- CARD UNTUK SECTION BERITA TERKINI -->
+<div id="berita-section" class="card mt-5">
+  <div class="card-body bg-light" id="sectionBerita">
+    <div class="card">
+      <h1 class="font-title-costum text-center text-uppercase">berita terkini</h1>
+      <div class="col-md-9 mx-auto">
+        <p style="text-align: justify;">
+          Kami menyediakan fitur <span class="fw-bold">"berita terkini"</span> bagi pengunjung website yang mengakses website profil Oetete. Dengan tujuan dapat meningkatkan literasi pengunjung website dan menambah wawasan mengenai informasi/berita yang dibaca.
+        </p>
+        <p >
+          Berikut ini berita yang kami sediakan dengan berbagai jenis berita:
+        </p>
+
+        <!-- JENIS KE  1 -->
+        <div class="accordion mb-3" id="accordionExample1">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <span class="fw-bolder fs-3">
+                  <i class="me-2 fa-solid fa-newspaper fa-beat-fade"></i>TOP NEWS
+                </span>
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+              <div class="accordion-body">
+                <div class="row justify-content-center" id="berita-container">
+                  <!-- all content for TOP NEWS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end JENIS 1 -->
+
+        <!-- JENIS KE  2 -->
+        <div class="accordion mb-3" id="accordionExample2">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <span class="fw-bolder fs-3">
+                  <i class="me-2 fa-solid fa-film fa-beat-fade"></i>HIBURAN
+                </span>
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+              <div class="accordion-body">
+                <div class="row justify-content-center" id="berita-hiburan-container">
+                  <!-- all content for HIBURAN -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end JENIS 2 -->
+
+        <!-- JENIS KE  3 -->
+        <div class="accordion mb-3" id="accordionExample3">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <span class="fw-bolder fs-3">
+                  <i class="me-2 fa-solid fa-scale-balanced fa-beat-fade" style="color: #36455e;"></i>
+                  HUKUM
+                </span>
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+              <div class="accordion-body">
+                <div class="row justify-content-center" id="berita-hukum-container">
+                  <!-- all content for HUKUM -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end JENIS 3 -->
+
+        <!-- Tambahkan lebih banyak item sesuai kebutuhan -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%-include('partials/scrollUp'); -%>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="/javascripts/scrollTop.js"></script>
 
     <%-include('partials/footer'); -%>
-    <%-include('partials/scrollUp'); -%>   
+
+
+
+    <script src="/javascripts/rssHiburan.js"></script>
+    <script src="/javascripts/rssHukum.js"></script>
+    <script src="/javascripts/rssKriminal.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script></body>
 </html>
